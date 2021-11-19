@@ -12,17 +12,17 @@
 
 const km = prompt('Quanti km vuoi percorrere?');
 console.log(km);
-
 const age = prompt('Inserisci la tua età');
 console.log(age);
-
 const priceKm = 0.21;
 
-let ticketPrice = parseInt(km) * priceKm;
+let ticketPrice = km * priceKm;
 console.log(ticketPrice);
 
-// if (age < user && passWord == pass) {
-//     document.writeln('Benvenuto ' + userName);
-// } else {
-//     alert('Dati sbagliati, riprova');
+if (age < 19) {
+    console.log(ticketPrice - (ticketPrice * 0.2));
+}   else if (age > 65) {
+    console.log(ticketPrice - (ticketPrice * 0.4));
+}   else {
+    console.log(ticketPrice);
 }
