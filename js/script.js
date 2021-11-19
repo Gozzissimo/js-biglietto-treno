@@ -12,7 +12,6 @@
 
 // prompt km
 const km = prompt('Quanti km vuoi percorrere?');
-console.log(km);
 
 if (isNaN(km)) {
     alert("Per favore inserisci solo valori numerici");
@@ -21,7 +20,6 @@ if (isNaN(km)) {
 
 // prompt età
 const age = prompt('Quanti hanni hai');
-console.log(age);
 
 if (isNaN(age)) {
     alert("Per favore inserisci solo valori numerici");
@@ -30,24 +28,18 @@ if (isNaN(age)) {
 
 // prezzo al km
 const priceKm = 0.21;
-console.log(age);
 
 // calcolo prezzo base
 let ticketPrice = km * priceKm;
-console.log(ticketPrice);
 
 // aggiunta sconti
 if (age < 19) {
     ticketPrice = ticketPrice - (ticketPrice * 0.2);
 }   else if (age > 64) {
     ticketPrice = ticketPrice - (ticketPrice * 0.4);
-}   else {
-    ticketPrice;
 }
-console.log(ticketPrice);
 
 let ticketPriceFinal = ticketPrice.toFixed(2)
-console.log(ticketPriceFinal);
 
 // messaggio in pagina
 document.writeln(`<h2>Il prezzo del suo biglietto è di: € <span class="final-price">${ticketPriceFinal}</span></h2>`)
