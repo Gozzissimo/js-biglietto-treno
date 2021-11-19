@@ -31,4 +31,4 @@ if (age < 19) {
 let ticketPriceFinal = ticketPrice.toFixed(2)
 // console.log(ticketPriceFinal);
 
-document.writeln('Il prezzo del suo biglietto è di € ' + ticketPriceFinal)
+document.writeln(`<h2>Il prezzo del suo biglietto è di: € ${ticketPriceFinal}</h2>`)
