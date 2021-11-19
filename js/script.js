@@ -11,18 +11,24 @@
 // L’output del prezzo finale va messo fuori in forma umana(con massimo due decimali, per indicare centesimi sul prezzo).
 
 const km = prompt('Quanti km vuoi percorrere?');
-console.log(km);
-const age = prompt('Inserisci la tua età');
-console.log(age);
+// console.log(km);
+const age = prompt('Quanti hanni hai');
+// console.log(age);
 const priceKm = 0.21;
-
+// console.log(age);
 let ticketPrice = km * priceKm;
-console.log(ticketPrice);
+// console.log(ticketPrice);
 
 if (age < 19) {
-    console.log(ticketPrice - (ticketPrice * 0.2));
-}   else if (age > 65) {
-    console.log(ticketPrice - (ticketPrice * 0.4));
+    ticketPrice = ticketPrice - (ticketPrice * 0.2);
+}   else if (age > 64) {
+    ticketPrice = ticketPrice - (ticketPrice * 0.4);
 }   else {
-    console.log(ticketPrice);
+    ticketPrice;
 }
+// console.log(ticketPrice);
+
+let ticketPriceFinal = ticketPrice.toFixed(2)
+// console.log(ticketPriceFinal);
+
+document.writeln('Il prezzo del suo biglietto è di € ' + ticketPriceFinal)
