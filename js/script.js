@@ -28,12 +28,15 @@ if (isNaN(age)) {
     location.reload();
 }
 
-// calcolo prezzo
+// prezzo al km
 const priceKm = 0.21;
 console.log(age);
+
+// calcolo prezzo base
 let ticketPrice = km * priceKm;
 console.log(ticketPrice);
 
+// aggiunta sconti
 if (age < 19) {
     ticketPrice = ticketPrice - (ticketPrice * 0.2);
 }   else if (age > 64) {
@@ -46,4 +49,5 @@ console.log(ticketPrice);
 let ticketPriceFinal = ticketPrice.toFixed(2)
 console.log(ticketPriceFinal);
 
+// messaggio in pagina
 document.writeln(`<h2>Il prezzo del suo biglietto è di: € <span class="final-price">${ticketPriceFinal}</span></h2>`)
