@@ -11,7 +11,7 @@
 // L’output del prezzo finale va messo fuori in forma umana(con massimo due decimali, per indicare centesimi sul prezzo).
 
 // prompt km
-const km = prompt('Quanti km vuoi percorrere?');
+const km = parseFloat(prompt('Quanti km vuoi percorrere?'));
 
 if (isNaN(km)) {
     alert("Per favore inserisci solo valori numerici");
@@ -19,7 +19,7 @@ if (isNaN(km)) {
 }
 
 // prompt età
-const age = prompt('Quanti hanni hai');
+const age = parseInt(prompt('Quanti hanni hai?'));
 
 if (isNaN(age)) {
     alert("Per favore inserisci solo valori numerici");
@@ -33,10 +33,10 @@ const priceKm = 0.21;
 let ticketPrice = km * priceKm;
 
 // aggiunta sconti
-if (age < 19) {
-    ticketPrice = ticketPrice - (ticketPrice * 0.2);
+if (age < 18) {
+    ticketPrice -= (ticketPrice * 0.2);
 }   else if (age > 64) {
-    ticketPrice = ticketPrice - (ticketPrice * 0.4);
+    ticketPrice -= (ticketPrice * 0.4);
 }
 
 let ticketPriceFinal = ticketPrice.toFixed(2)
